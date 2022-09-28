@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Product Add</title>
+<title>ShopZone</title>
+<link rel="shortcut icon"
+	href="https://i.postimg.cc/gcKQJqW0/Sz-1-11.png" type="image/x-icon">
 </head>
 <style>
 body {
@@ -10,24 +12,20 @@ body {
 	margin: 0;
 	min-height: 100vh;
 }
+
 ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-
-h2,
-h3,
-a {
+h2, h3, a {
 	color: #34495e;
 }
 
 a {
 	text-decoration: none;
 }
-
-
 
 .logo {
 	margin: 0;
@@ -36,10 +34,9 @@ a {
 
 .main-nav {
 	margin-top: 5px;
-
 }
-.logo a,
-.main-nav a {
+
+.logo a, .main-nav a {
 	padding: 10px 15px;
 	text-transform: uppercase;
 	text-align: center;
@@ -55,113 +52,109 @@ a {
 	color: #718daa;
 }
 
-
-
 .header {
 	padding-top: .5em;
 	padding-bottom: .5em;
 	border: 1px solid #a2a2a2;
 	background-color: #f4f4f4;
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
 
-
 /* ================================= 
   Media Queries
 ==================================== */
-
-
-
-
-@media (min-width: 769px) {
-	.header,
-	.main-nav {
+@media ( min-width : 769px) {
+	.header, .main-nav {
 		display: flex;
 	}
 	.header {
 		flex-direction: column;
-		align-items: center;
-    	.header{
-		width: 80%;
+		align-items: center; . header { width : 80%;
 		margin: 0 auto;
 		max-width: 1150px;
 	}
-	}
-
 }
 
-@media (min-width: 1025px) {
+}
+@media ( min-width : 1025px) {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-
 }
-
 </style>
 <center></center>
-	<header class="header">
-		<h1 class="logo"><a href="#">Amazon</a></h1>
-      <ul class="main-nav">
-          <li><a href="AdminHome.html" id="f1">Home</a></li>
-          <li><a href="ChangePasswordChecker.html" id="f1">AdminPassword</a></li>
-          <li><a href="DeleteAccount.html" id="f1">DeleteAdmin</a></li>
-          <li><a href="Logout" id="f1">AdminLogout</a></li>
-      </ul>
-	</header>
+<header class="header">
+	<h1 class="logo">
+		<a href="#">ShopZone</a>
+	</h1>
+	<ul class="main-nav">
+		<li><a href="AdminHome.html" id="f1">Home</a></li>
+		<li><a href="ChangePasswordChecker.html" id="f1">AdminPassword</a></li>
+		<li><a href="DeleteAccount.html" id="f1">DeleteAdmin</a></li>
+		<li><a href="Logout" id="f1">AdminLogout</a></li>
+	</ul>
+</header>
 </br>
 <body>
 
-<form action="AddProduct">
-<center>
-Product Id: <input type="text" name="pid" placeholder="Enter Product Id"/>
-Product Name: <input type="text" name="name" placeholder="Enter Product Name"/>
-Product Price: <input type="text" name="price" placeholder="Enter Product Price"/>
-Product Category: <select name="cat">
-<option>Mobile</option>
-<option>TV</option>
-<option>AC</option>
-<option>Laptop</option>
-<option>Fan</option>
-<option>PC</option>
-<option>Earphones</option>
-<option>Washing Machine</option>
-<option>Tablets</option>
-<option>Watch</option>
-<option>Cameras</option>
-</select>
-Product Company: <select name="cmp">
-<option>Apple</option>
-<option>Samsung</option>
-<option>Xaomi</option>
-<option>Redmi</option>
-<option>Realme</option>
-<option>Oppo</option>
-<option>Vivo</option>
-<option>LG</option>
-<option>Sony</option>
-<option>HP</option>
-<option>DELL</option>
-<option>Lenevo</option>
-<option>Asus</option>
-<option>Acer</option>
-<option>Boat</option>
-<option>Bose</option>
-<option>Lloyd</option>
-<option>Microsoft</option>
-<option>Google</option>
-<option>Titan</option>
-<option>Fossil</option>
-<option>Canon</option>
-<option>Nikon</option>
-</select></br></br>
-<input type="submit" value="ADD"/>
-</center>
-</form>
+	<form action="AddProduct">
+		<center>
+			Product Id: <input type="text" name="pid"
+				placeholder="Enter Product Id" /> Product Name: <input type="text"
+				name="name" placeholder="Enter Product Name" /> Product Price: <input
+				type="text" name="price" placeholder="Enter Product Price" />
+			Product Category: <select name="cat">
+				<option>Mobile</option>
+				<option>TV</option>
+				<option>AC</option>
+				<option>Laptop</option>
+				<option>Other</option>
+				<option>Fan</option>
+				<option>PC</option>
+				<option>Earphones</option>
+				<option>Washing Machine</option>
+				<option>Tablets</option>
+				<option>Watch</option>
+				<option>Cameras</option>
+			</select> Product Company: <select name="cmp">
+				<option>Apple</option>
+				<option>Samsung</option>
+				<option>Xaomi</option>
+				<option>Redmi</option>
+				<option>Realme</option>
+				<option>Oppo</option>
+				<option>Vivo</option>
+				<option>LG</option>
+				<option>Sony</option>
+				<option>HP</option>
+				<option>DELL</option>
+				<option>Lenevo</option>
+				<option>Asus</option>
+				<option>Acer</option>
+				<option>Boat</option>
+				<option>Bose</option>
+				<option>Lloyd</option>
+				<option>Microsoft</option>
+				<option>Google</option>
+				<option>Titan</option>
+				<option>Fossil</option>
+				<option>Canon</option>
+				<option>Nikon</option>
+			</select></br>
+			</br>
+			<!-- Profile Photo:<input type="file" name="photo" size="50" /> -->
+			<input type="submit" value="ADD" />
+			<button>
+				<a href="AdminHome.html">Back</a>
+			</button>
+		</center>
+
+	</form>
 </body>
 </html>

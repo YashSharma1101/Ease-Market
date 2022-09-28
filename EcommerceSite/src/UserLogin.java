@@ -1,5 +1,4 @@
 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -20,43 +19,34 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet("/UserLogin")
 public class UserLogin extends HttpServlet {
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out=response.getWriter();
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		String unm=request.getParameter("unm");
-		String email=request.getParameter("email");
-		String pwd=request.getParameter("pwd");
+		String unm = request.getParameter("unm");
+		String email = request.getParameter("email");
+		String pwd = request.getParameter("pwd");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ad720","root","root");
-			String qr="select * from user where email=? and pwd=?";
-			PreparedStatement ps=con.prepareStatement(qr);
-			ps.setString(1 , email);
-			ps.setString(2 , pwd);
-			ResultSet rs=ps.executeQuery();
-			if(rs.next() )
-			{
-				if(email.equals("admin@gmail.com") && pwd.equals("admin1234"))
-				{
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ad720", "root", "root");
+			String qr = "select * from user where email=? and pwd=?";
+			PreparedStatement ps = con.prepareStatement(qr);
+			ps.setString(1, email);
+			ps.setString(2, pwd);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				if (email.equals("admin@gmail.com") && pwd.equals("admin1234")) {
+
 					response.sendRedirect("AdminHome.html");
+				} else {
+
+					HttpSession session = request.getSession();
+					session.setAttribute("uid", email);
+					// session.setAttribute("uid", unm);
+					response.sendRedirect("UserHome.jsp");
 				}
-				else{
-				HttpSession session=request.getSession();
-				session.setAttribute("uid", email);
-				//session.setAttribute("uid", unm);
-				
-				response.sendRedirect("UserHome");
-				}
-			}
-//			elseif()
-//			{
-//				RequestDispatcher rd=request.getRequestDispatcher("UserLogin.html");
-//				rd.include(request, response);
-//				out.println("<script>window.alert('Invalid id');</script>");
-//			}
-			else
-			{
-				RequestDispatcher rd=request.getRequestDispatcher("UserLogin.html");
+			} else {
+				RequestDispatcher rd = request.getRequestDispatcher("UserLogin.html");
 				rd.include(request, response);
 				out.println("<script>window.alert('Invalid Email / Password');</script>");
 			}
@@ -66,8 +56,7 @@ public class UserLogin extends HttpServlet {
 			// TODO Auto-generated catch block
 			out.println(e);
 		}
-		
-		
+
 	}
 
 }

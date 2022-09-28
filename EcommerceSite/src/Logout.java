@@ -1,5 +1,4 @@
 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -16,12 +15,13 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out=response.getWriter();
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		HttpSession session=request.getSession();
+		HttpSession session = request.getSession();
 		session.invalidate();
-		RequestDispatcher rd=request.getRequestDispatcher("UserLogin.html");
+		RequestDispatcher rd = request.getRequestDispatcher("UserLogin.html");
 		rd.include(request, response);
 		out.println("<script>window.alert('logout sucessfully');</script>");
 	}
