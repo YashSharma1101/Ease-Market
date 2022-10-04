@@ -34,11 +34,11 @@ public class UserSignUp extends HttpServlet {
 			ps.setString(3, pwd);
 			int i = ps.executeUpdate();
 			if (i > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("UserLogin.html");
+				RequestDispatcher rd = request.getRequestDispatcher("bootstrapLOGIN.html");
 				rd.include(request, response);
 				out.println("<script>window.alert('Sign up sucessfull ');</script>");
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("UserSignUp.html");
+				RequestDispatcher rd = request.getRequestDispatcher("bootstrapSIGNUP.html");
 				rd.include(request, response);
 				out.println("<script>window.alert('Registration Failed');</script>");
 			}

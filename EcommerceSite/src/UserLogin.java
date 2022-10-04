@@ -46,7 +46,7 @@ public class UserLogin extends HttpServlet {
 					response.sendRedirect("UserHome.jsp");
 				}
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("UserLogin.html");
+				RequestDispatcher rd = request.getRequestDispatcher("bootstrapLOGIN.html");
 				rd.include(request, response);
 				out.println("<script>window.alert('Invalid Email / Password');</script>");
 			}

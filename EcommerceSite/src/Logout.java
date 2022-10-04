@@ -21,7 +21,7 @@ public class Logout extends HttpServlet {
 		response.setContentType("text/html");
 		HttpSession session = request.getSession();
 		session.invalidate();
-		RequestDispatcher rd = request.getRequestDispatcher("UserLogin.html");
+		RequestDispatcher rd = request.getRequestDispatcher("bootstrapLOGIN.html");
 		rd.include(request, response);
 		out.println("<script>window.alert('logout sucessfully');</script>");
 	}
