@@ -1,6 +1,10 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <style>
+body {
+	margin-top: 150px;
+}
+
 #f2 {
 	text-decoration: none;
 	color: black;
@@ -21,7 +25,6 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	s
 }
 
 .logo {
@@ -67,7 +70,10 @@ ul {
 	border-radius: 5px;
 	z-index: 10000;
 	position: fixed;
+	top: 0;
+	width: 100%;
 }
+
 @media ( min-width : 769px) {
 	.header, .main-nav {
 		display: flex;
@@ -134,42 +140,10 @@ ul {
 	<div class="navbar-header">
 		<a class="brand navbar-brand" href="UserAboutus.jsp"><img
 			src="https://i.postimg.cc/KzggK034/Sz-1.png" style="width: 80px;"
-			alt=""></a><b style="color: blue;"></b>
+			alt=""></a><b
+			style="color: #f5e7c6; font-family: Trebuchet MS; font-size: 23px; text-shadow: 0 0 12px darkblue;">SHOPZONE</b>
 	</div>
 	<ul class="main-nav">
-		<li><b><a href="#" id="f1"
-				style="color:#f5e7c6; font-family: Trebuchet MS; font-size: 23px; text-shadow: 0 0 12px darkblue;">SHOPZONE</a></b></li>
-		<!-- <li><a href="#" id="f1"></a></li> -->
-		<li><a href="#" id="f1"></a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
-		<li><a href="#" id="f1"> </a></li>
 		<li><div class="btn-group" role="group">
 				<button id="btnGroupDrop1" type="button"
 					class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
@@ -510,7 +484,7 @@ ul {
 						<li><a class="dropdown-item" href="#">Uniforms</a></li>
 					</ul></li>
 			</ul></li>
-		</ul>
+	</ul>
 	</br>
 </center>
 </br>
@@ -548,8 +522,8 @@ ul {
 							</p>
 						</center>
 					</div>
-					<a href="Payment.jsp" class="btn btn-danger">Buy Now</a> 
-					<a href="AddCart?pid=<%=pid%>&name=<%=name%>&price=<%=price%>&cat=<%=cat%>&cmp=<%=cmp%>"
+					<a href="Payment.jsp" class="btn btn-danger">Buy Now</a> <a
+						href="AddCart?pid=<%=pid%>&name=<%=name%>&price=<%=price%>&cat=<%=cat%>&cmp=<%=cmp%>"
 						class="btn btn-info">Add to Cart</a>
 				</div>
 			</div>

@@ -1,6 +1,10 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <style>
+body {
+	margin-top: 150px;
+}
+
 h3 {
 	align: center;
 }
@@ -63,11 +67,11 @@ ul {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
-/* ================================= 
-  Media Queries
-==================================== */
 @media ( min-width : 769px) {
 	.header, .main-nav {
 		display: flex;
@@ -135,7 +139,8 @@ ul {
 	<div class="navbar-header">
 		<a class="brand navbar-brand" href="UserAboutus.jsp"><img
 			src="https://i.postimg.cc/KzggK034/Sz-1.png" style="width: 80px;"
-			alt=""></a><b style="color:black; font-family: Trebuchet MS; font-size: 23px; text-shadow: 0 0 12px darkblue;">SHOPZONE</b>
+			alt=""></a><b
+			style="color: black; font-family: Trebuchet MS; font-size: 23px; text-shadow: 0 0 12px darkblue;">SHOPZONE</b>
 		<!-- <h1 class="logo">ShopZone</h1> -->
 	</div>
 	<ul class="main-nav">
@@ -159,13 +164,17 @@ ul {
 	</ul>
 </header>
 <center>
-	</br>
-	<h1>Your Cart</h1>
-	<%
-		String email = (String) session.getAttribute("uid");
-	%>
-	<%="Welcome " + email%></br>
-
+	<body>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		<h1>Your Cart</h1>
+		<%
+			String email = (String) session.getAttribute("uid");
+		%>
+		<%="Welcome " + email%></br>
 </center>
 <div class="container-fluid">
 	<div class="row">
@@ -202,8 +211,7 @@ ul {
 					</p>
 				</div>
 				<a href="CartDelete?pid=<%=pid%>" class="btn btn-link">Remove
-					From Cart</a> <a href="Payment.jsp"
-					class="btn btn-info">Buy <%=name%></a>
+					From Cart</a> <a href="Payment.jsp" class="btn btn-info">Buy <%=name%></a>
 			</div>
 
 		</div>
